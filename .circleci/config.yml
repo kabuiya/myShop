@@ -34,7 +34,7 @@ jobs:
       - run:
           name: Run tests
           command: |
-            python manage.py test
+            python manage.py test --verbosity=3
 
 workflows:
   version: 2
