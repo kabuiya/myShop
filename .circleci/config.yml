@@ -27,11 +27,14 @@ jobs:
       - run:
           name: Initialize database
           command: |
+            mkdir ecomm_shop/migrations
+            touch ecomm_shop/migrations/__init__.py
             python manage.py makemigrations
-            python manage.py migrate
-            python manage.py showmigrations
             
-
+      - run:
+          name: Debug .tests.py
+          command: |
+            cat tests.py
       - run:
           name: Run tests
           command: |
