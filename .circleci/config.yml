@@ -7,9 +7,9 @@ jobs:
         environment:
           DB_NAME: circle_test
           DB_USER: postgres
-          DB_PASSWORD: ""
+          DB_PASSWORD: password
           DB_HOST: localhost
-          DB_PORT: 5433
+          DB_PORT: 5432
           # Set any other necessary environment variables here, such as register_name and owner
       - image: cimg/postgres:14.0
         environment:
