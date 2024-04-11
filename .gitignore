@@ -1,0 +1,43 @@
+# Byte-compiled / optimized Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Django development server
+*.log
+*.pot
+*.sqlite3
+
+# Static files
+/static/
+# Media files
+/media/
+
+# Virtual environment
+env/
+ENV/
+
+# IDE files
+.vscode/
+.idea/
+
+# Dependency directories
+/dist/
+/build/
+/node_modules/
+/bower_components/
+
+# Ignore secret files containing sensitive information like secret keys
+*.secret
+*.env
+
+# Ignore Django secret key settings
+*.key
+
+# Ignore coverage reports
+.coverage/
+htmlcov/
+
+# Ignore database migrations
+**/migrations/

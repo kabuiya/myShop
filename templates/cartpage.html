@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block body_content %}
+
+<table id="cart-table" class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Quantity</th>
+    </tr>
+  </thead>
+
+    {% for item in cart_obj %}
+
+  <tbody>
+    <tr id="row-{{ item.id }}">
+      <th scope="row"></th>
+      <td>{{ item.product.name }}</td>
+      <td>{{ item.product.price }}</td>
+      <td>
+          <button onclick="increase({{ item.id }})">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-plus-fill" viewBox="0 0 16 16">
+                <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0"/>
+              </svg>
+          </button>
+         <button id="quantity-{{ item.id }}">{{ item.quantity }}</button>
+          <button  onclick="decrease({{ item.id }})">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-circle" viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                  <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8"/></svg>
+            </button>
+      </td>
+        <td id="total-{{ item.id }}">{{ item.cartitem_total }}</td>
+
+    </tr>
+  </tbody>
+  {% endfor %}
+  </thead>
+    <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Total</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col" id="cart_total">{{ user_cart.total }}</th>
+    </tr>
+  </thead>
+</table>
+  <div class="row">
+    <div class="col"  style="text-align: right;">
+      <a href="{% url 'checkout' %}" class="btn btn-success">CHECK-OUT</a>
+    </div>
+  </div>
+{% endblock body_content %}

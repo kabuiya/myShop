@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+  {% block body_content %}
+    <form  method = 'POST'>
+       {% csrf_token %}
+      <div class="row">
+        <div class="col">
+          <input type="text" class="form-control" name="username" placeholder="username">
+        </div>
+        <div class="col">
+          <input type="email" class="form-control" name="email" placeholder="Email_address">
+        </div>
+      </div>
+       <button type="submit" class="btn btn-primary">Sign up</button>
+    </form>
+
+{% endblock body_content%}

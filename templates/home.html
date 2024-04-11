@@ -1,0 +1,22 @@
+
+{% extends "base.html" %}
+{% block body_content %}
+<div class="d-flex justify-content-center">
+    <div class="row">
+        {% for product in products %}
+        <div class="col-md-4">
+            <div class="card mb-2" style="width: 18rem; max-width: 100%; margin: auto;">
+                <img class="card-img-top" src="{{ product.image.url }}" alt="Product Image">
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <p class="card-text">{{ product.item_description }}</p>
+                    <a href="#" class="btn btn-primary">${{ product.price }}</a>
+                    <button onclick="addtocart({{ product.id }})" type="button" class="btn btn-primary" >Add to cart</button>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock body_content %}
+

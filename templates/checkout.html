@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block body_content %}
+<div class="row">
+    <div class="col-md-6">
+        <div class=" text-center pt-3 text-success">
+            <h4>Cart Summary</h4>
+        </div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Total items</th>
+                    <th scope="col">Total cost</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row"></th>
+                    <td>{{ user_cart.quantity_amount }}</td>
+                    <td>${{ user_cart.total }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div style="text-align: center;">
+            <a href="{% url 'cart' %}" class="btn btn-success">View Details</a>
+        </div>
+    </div>
+
+    <div class="col">
+        <form  method="POST">
+            <div class=" text-center pt-3 text-success">
+                 <h4>Confirm Delivery Details</h4>
+            </div>
+            {% csrf_token %}
+            <div>
+                <label for="Phone_number" class="form-label">Contact</label>
+                <input type="text" class="form-control" id="phone_number" name="phone_number">
+            </div>
+            <div>
+                <label for="inputAddress" class="form-label">Address</label>
+                <input type="text" class="form-control" id="inputAddress" name="address" placeholder="1234 Main St">
+            </div>
+            <div>
+                <label for="inputAddress2" class="form-label">Address 2</label>
+                <input type="text" class="form-control" id="inputAddress2" name="address2" placeholder="Apartment, studio, or floor">
+            </div>
+            <div>
+                <label for="inputCity" class="form-label">City</label>
+                <input type="text" class="form-control" id="inputCity" name="city">
+            </div>
+            <div class="text-center pt-3 text-primary">
+                <h4>By placing the order you agree to <a class="text-danger"  href="{% url 'terms' %}"> Our Terms and Conditions</a></h4>
+            </div>
+
+            <div class="text-center pt-3">
+                <button type="submit" class="btn btn-success">Place Order</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock body_content %}

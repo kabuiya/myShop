@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+  {% block body_content %}
+   <form class="row justify-content-center" method="POST">
+    {% csrf_token %}
+    <div class="col-md-4 mb-2">
+        <input type="text" class="form-control" name="username" placeholder="Username">
+    </div>
+    <div class="col-md-4 mb-2">
+        <input type="password" class="form-control" name="password" placeholder="Password">
+    </div>
+    <div class="col-md-4">
+        <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+    </div>
+</form>
+{% endblock body_content%}
