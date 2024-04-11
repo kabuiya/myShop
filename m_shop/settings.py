@@ -80,7 +80,7 @@ DATABASES = {
         "USER": "postgres",
         "PASSWORD": "",
         "HOST": "localhost",
-        "PORT": "5433",
+        "PORT": "5432",
         "OPTIONS": {
             "options": "-c search_path=public",
         },
