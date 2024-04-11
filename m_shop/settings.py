@@ -76,8 +76,8 @@ WSGI_APPLICATION = "m_shop.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "ecommerce_shop",
-        "USER": "circleci",
+        "NAME": "circle_test",
+        "USER": "postgres",
         "PASSWORD": "",
         "HOST": "localhost",
         "PORT": "5433",
