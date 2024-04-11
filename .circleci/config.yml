@@ -5,7 +5,7 @@ jobs:
     docker:
       - image: cimg/python:3.10
         environment:
-          DB_NAME: ecommerce_shop
+          DB_NAME: circle_test
           DB_USER: postgres
           DB_PASSWORD: password
           DB_HOST: localhost
@@ -35,6 +35,7 @@ jobs:
       - run:
           name: Initialize database
           command: |
+            python manage.py makemigrations
             python manage.py migrate
       - run:
           name: Run tests
