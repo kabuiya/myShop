@@ -76,11 +76,11 @@ WSGI_APPLICATION = "m_shop.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "mydb",
-        "USER": "myuser",
+        "NAME": "commerce",
+        "USER": "postgres",
         "PASSWORD": "",
         "HOST": "localhost",
-        "PORT": "5432",
+        "PORT": "5433",
         "OPTIONS": {
             "options": "-c search_path=public",
         },
