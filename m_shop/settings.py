@@ -77,7 +77,7 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": "ecommerce_shop",
-        "USER": "postgres",
+        "USER": "circleci",
         "PASSWORD": "",
         "HOST": "localhost",
         "PORT": "5433",
