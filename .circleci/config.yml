@@ -3,21 +3,50 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: python:3.11
+      - image: cimg/python:3.10
+        environment:
+          DB_NAME: circle_test
+          DB_USER: postgres
+          DB_PASSWORD: ""
+          DB_HOST: localhost
+          DB_PORT: 5433
+          # Set any other necessary environment variables here, such as register_name and owner
+      - image: cimg/postgres:14.0
+        environment:
+          POSTGRES_USER: postgres
+          POSTGRES_DB: circle_test
 
     steps:
       - checkout
-
+      - run: sudo apt-get update
+      - run: sudo apt-get install postgresql-client
+      - run: pip install -r requirements.txt
       - run:
-          name: Install Dependencies
+          name: Install dockerize
           command: |
-            pip install -r requirements.txt
-        
-
+           sudo apt-get update
+           sudo apt-get install -y wget
+           wget https://github.com/jwilder/dockerize/releases/download/v0.6.1/dockerize-linux-amd64-v0.6.1.tar.gz
+           sudo tar -C /usr/local/bin -xzvf dockerize-linux-amd64-v0.6.1.tar.gz
+           rm dockerize-linux-amd64-v0.6.1.tar.gz
       - run:
-          name: Run Tests
+         name: Wait for PostgreSQL
+         command: dockerize -wait tcp://localhost:5433 -timeout 1m
+      - run:
+          name: Initialize database
+          command: |
+            python manage.py migrate
+      - run:
+          name: Run tests
           command: |
             python manage.py test
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
+
             
 
       
