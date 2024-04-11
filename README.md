@@ -1,3 +1,6 @@
+[![CircleCI](https://dl.circleci.com/status-badge/img/circleci/3WDH8NqBWqqcfhediMABwD/DSWZkYA96p3DdnKNskisfW/tree/main.svg?style=svg&circle-token=CCIPRJ_B49sDhqw2cCUWV1eYoGkWm_1454834b7b5c2c39d9906c76ddba969ed8f14fc3)](https://dl.circleci.com/status-badge/redirect/circleci/3WDH8NqBWqqcfhediMABwD/DSWZkYA96p3DdnKNskisfW/tree/main)
+
+
 # My Shop - Simple E-commerce Website
 
 Welcome to My Shop! My Shop is a simple e-commerce website where users can register, log in, add items to their cart, remove items from their cart, and place orders.
