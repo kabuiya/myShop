@@ -180,3 +180,8 @@ class CheckoutTest(TestCase):
     def test_checkout_unauthenticated_user(self):
         response = self.client.get(self.checkout_url)
         self.assertEqual(response.status_code, 200)  # Redirects to login page
+
+
+
+
+

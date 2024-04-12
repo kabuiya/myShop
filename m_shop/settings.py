@@ -72,11 +72,27 @@ WSGI_APPLICATION = "m_shop.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
+#
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.postgresql",
+#         "NAME": "ecommerce",
+#         "USER": "postgres",
+#         "PASSWORD": "",
+#         "HOST": "localhost",
+#         "PORT": "5433",
+#         "OPTIONS": {
+#             "options": "-c search_path=public",
+#         },
+#
+#     }
+# }
+
 
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "commerce",
+        "NAME": "ecommerce_shop",
         "USER": "postgres",
         "PASSWORD": "",
         "HOST": "localhost",

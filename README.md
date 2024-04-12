@@ -66,7 +66,9 @@ This project is licensed under the [MIT License](LICENSE).
 
 
 ## Project Tasks/Stories.
-**ser Registration**
+
+**user Registration:**
+
     Design user registration form.
     1.Implement server-side validation for registration inputs (e.g., email validation, password strength).
     2.Implement database storage for user registration data.
@@ -82,6 +84,7 @@ This project is licensed under the [MIT License](LICENSE).
     5.Implement login endpoint on the server.
 
 **User Logout:**
+
     1.1mplement logout functionality on the frontend.
     2.Destroy user session on the server.
     3.Redirect user to appropriate page after logout.
