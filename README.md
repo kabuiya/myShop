@@ -55,6 +55,11 @@ To run My Shop locally on your machine, follow these steps:
 
 6. **Access My Shop:** Open your web browser and navigate to `http://localhost:8000`.
 7. **To run tests:** `python manage.py test`
+8. **Run tests with coverage and generate coverage report:** 
+   ```bash
+   coverage run manage.py test
+   coverage report -m
+   ```
 
 ## Contributing
 
@@ -65,112 +70,3 @@ Contributions are welcome! If you'd like to contribute to My Shop, please fork t
 This project is licensed under the [MIT License](LICENSE).
 
 
-## Project Tasks/Stories.
-
-**user Registration:**
-
-    Design user registration form.
-    1.Implement server-side validation for registration inputs (e.g., email validation, password strength).
-    2.Implement database storage for user registration data.
-    3.Create frontend validation for registration form.
-    4.Implement registration endpoint on the server.
-
-**User Login:**
-
-    1.Design login form.
-    2.Implement server-side validation for login credentials.
-    3.Implement authentication mechanism (e.g., sessions, JSON Web Tokens).
-    4.Create frontend validation for login form.
-    5.Implement login endpoint on the server.
-
-**User Logout:**
-
-    1.1mplement logout functionality on the frontend.
-    2.Destroy user session on the server.
-    3.Redirect user to appropriate page after logout.
-
-
-**Delete Account:**
-
-    1.design delete account functionality.
-    2.Implement server-side logic to delete user account.
-    3.Implement frontend confirmation modal for account deletion
-
-**Update User Details:**
-
-    1,Design user profile page.
-    2.Implement form for updating user details.
-    3.Implement server-side logic to update user details.
-    4.Implement frontend validation for user details update form.
-
-**Display Items:**
-
-    1.Design product listing page.
-    2.Fetch fruit items data from the database.
-    3.Implement pagination or infinite scroll for large datasets.
-    4.Display items with relevant information (e.g., name, price, image, description).
-
-**Add to Cart:**
-
-    1.Design "Add to Cart" button on product listing page.
-    2.Implement server-side logic to handle adding items to the cart.
-    3.Update cart data in the database.
-    4.Implement frontend functionality to add items to the cart.
-
-**View Cart:**
-
-    1.Design cart page.
-    2.Fetch cart items data from the database.
-    3.Implement logic to prevent viewing the cart if no items are added.
-    4.Display cart items with relevant information (e.g., name, price, quantity, cart_total).
-
-**Checkout:**
-
-    Design checkout page.
-    Calculate total price based on items in the cart.
-    Implement server-side logic for processing orders.
-    Update inventory after successful order placement.
-
-**Authentication Middleware:**
-
-    Implement middleware to check if the user is logged in for certain routes (e.g., add to cart, view cart).
-    Redirect users to login page if they try to access restricted pages without authentication.
-
-**Adding/Removing Cart Items:**
-
-    1.Create a user story for adding/removing cart items or adjusting quantity.
-    2.Break down into tasks:
-    3.Define API endpoints for adding/removing cart items or adjusting quantity.
-    4.Implement logic for each endpoint.
-    5.Update data structures to reflect changes in cart items.
-
-**Writing Tests:**
-
-    2.Break down into tasks:
-    3.Write unit tests for each endpoint.
-    5.Ensure proper coverage of all endpoints and edge cases.
-    5.Organize tests into appropriate test suites.
-
-
-**Pushing to GitHub:**
-
-    Create a user story for pushing code to GitHub.
-    Break down into tasks:
-    Commit changes to local repository.
-    Push changes to GitHub repository.
-
-**Integrating CircleCI:**
-
-    Create a user story for integrating CircleCI.
-    Break down into tasks:
-    Integrate CircleCI with GitHub repository.
-    Configure CircleCI to run tests and linters on each commit/push.
-    Ensure builds pass successfully.
-
-**Integrating Coveralls:**
-
-    Create a user story for integrating Coveralls.
-    Break down into tasks:
-    Integrate Coveralls with GitHub repository.
-    Configure Coveralls to track test coverage.
-    Ensure coverage reports are generated and updated properly.
