@@ -65,16 +65,15 @@ Contributions are welcome! If you'd like to contribute to My Shop, please fork t
 This project is licensed under the [MIT License](LICENSE).
 
 
-## Project Tasks.
-
-# User Registration 
+## Project Tasks/Stories.
+**ser Registration**
     Design user registration form.
     1.Implement server-side validation for registration inputs (e.g., email validation, password strength).
     2.Implement database storage for user registration data.
     3.Create frontend validation for registration form.
     4.Implement registration endpoint on the server.
 
-# User Login:
+**User Login:**
 
     1.Design login form.
     2.Implement server-side validation for login credentials.
@@ -82,59 +81,59 @@ This project is licensed under the [MIT License](LICENSE).
     4.Create frontend validation for login form.
     5.Implement login endpoint on the server.
 
-# User Logout:
+**User Logout:**
     1.1mplement logout functionality on the frontend.
     2.Destroy user session on the server.
     3.Redirect user to appropriate page after logout.
 
 
-# Delete Account:
+**Delete Account:**
 
     1.design delete account functionality.
     2.Implement server-side logic to delete user account.
     3.Implement frontend confirmation modal for account deletion
 
-# Update User Details:
+**Update User Details:**
 
     1,Design user profile page.
     2.Implement form for updating user details.
     3.Implement server-side logic to update user details.
     4.Implement frontend validation for user details update form.
 
-# Display Items:
+**Display Items:**
 
     1.Design product listing page.
     2.Fetch fruit items data from the database.
     3.Implement pagination or infinite scroll for large datasets.
     4.Display items with relevant information (e.g., name, price, image, description).
 
-# Add to Cart:
+**Add to Cart:**
 
     1.Design "Add to Cart" button on product listing page.
     2.Implement server-side logic to handle adding items to the cart.
     3.Update cart data in the database.
     4.Implement frontend functionality to add items to the cart.
 
-# View Cart:
+**View Cart:**
 
     1.Design cart page.
     2.Fetch cart items data from the database.
     3.Implement logic to prevent viewing the cart if no items are added.
     4.Display cart items with relevant information (e.g., name, price, quantity, cart_total).
 
-# Checkout:
+**Checkout:**
 
     Design checkout page.
     Calculate total price based on items in the cart.
     Implement server-side logic for processing orders.
     Update inventory after successful order placement.
 
-# Authentication Middleware:
+**Authentication Middleware:**
 
     Implement middleware to check if the user is logged in for certain routes (e.g., add to cart, view cart).
     Redirect users to login page if they try to access restricted pages without authentication.
 
-# Adding/Removing Cart Items:
+**Adding/Removing Cart Items:**
 
     1.Create a user story for adding/removing cart items or adjusting quantity.
     2.Break down into tasks:
@@ -142,19 +141,22 @@ This project is licensed under the [MIT License](LICENSE).
     4.Implement logic for each endpoint.
     5.Update data structures to reflect changes in cart items.
 
-# Writing Tests with unittest:
+**Writing Tests:**
+
     2.Break down into tasks:
     3.Write unit tests for each endpoint.
     5.Ensure proper coverage of all endpoints and edge cases.
     5.Organize tests into appropriate test suites.
-# Pushing to GitHub:
+
+
+**Pushing to GitHub:**
 
     Create a user story for pushing code to GitHub.
     Break down into tasks:
     Commit changes to local repository.
     Push changes to GitHub repository.
 
-# Integrating CircleCI:
+**Integrating CircleCI:**
 
     Create a user story for integrating CircleCI.
     Break down into tasks:
@@ -162,7 +164,7 @@ This project is licensed under the [MIT License](LICENSE).
     Configure CircleCI to run tests and linters on each commit/push.
     Ensure builds pass successfully.
 
-# Integrating Coveralls:
+**Integrating Coveralls:**
 
     Create a user story for integrating Coveralls.
     Break down into tasks:

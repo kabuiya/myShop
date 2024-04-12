@@ -34,8 +34,12 @@ jobs:
       - run:
           name: Run tests
           command: |
-            python manage.py test --verbosity=3
-
+            python manage.py test 
+      - run:
+          name: Run tests with coverage and generate report
+          command: |
+            coverage run manage.py test
+            coverage report -m
 workflows:
   version: 2
   build_and_test:

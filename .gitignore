@@ -38,6 +38,7 @@ ENV/
 # Ignore coverage reports
 .coverage/
 htmlcov/
+.coverage
 
 # Ignore database migrations
 **/migrations/
