@@ -30,11 +30,7 @@ jobs:
             mkdir ecomm_shop/migrations
             touch ecomm_shop/migrations/__init__.py
             python manage.py makemigrations
-            
-      - run:
-          name: Debug .tests.py
-          command: |
-            cat tests.py
+
       - run:
           name: Run tests
           command: |
