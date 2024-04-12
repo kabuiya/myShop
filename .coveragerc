@@ -7,4 +7,5 @@ omit =
     */settings/*
     */urls.py
     */wsgi.py
+    */asgi.py
     */__init__.py

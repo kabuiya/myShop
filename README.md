@@ -1,5 +1,5 @@
 [![CircleCI](https://dl.circleci.com/status-badge/img/circleci/3WDH8NqBWqqcfhediMABwD/DSWZkYA96p3DdnKNskisfW/tree/main.svg?style=svg&circle-token=CCIPRJ_B49sDhqw2cCUWV1eYoGkWm_1454834b7b5c2c39d9906c76ddba969ed8f14fc3)](https://dl.circleci.com/status-badge/redirect/circleci/3WDH8NqBWqqcfhediMABwD/DSWZkYA96p3DdnKNskisfW/tree/main)
-
+[![Coverage Status](https://coveralls.io/repos/github/kabuiya/myShop/badge.svg)](https://coveralls.io/github/kabuiya/myShop)
 
 # My Shop - Simple E-commerce Website
 
